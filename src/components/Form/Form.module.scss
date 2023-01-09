@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+
+  .input {
+    border: none;
+    border-radius: 10px;
+    color: black;
+    height: 40px;
+    width: 200px;
+    padding-left: 5px;
+  }
+
+  .input:hover {
+    border: 2px solid $blue-color;
+  }
+
+  .submit {
+    align-items: center;
+    border: none;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+
+    .icon {
+      height: 35px;
+      width: 35px;
+    }
+
+    .icon:hover {
+      color: $blue-color;
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 700px){
+    .input {
+      height: 25px;
+    }
+
+    .submit {
+      height: 25px;
+
+      .icon {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

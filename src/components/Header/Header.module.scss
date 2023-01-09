@@ -1,0 +1,143 @@
+@import '../../styles/variables.scss';
+
+.header {
+  background: skyblue url("../../assets/images/cloud.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  height: 85px;
+  width: 100%;
+
+  &.dark {
+    background: $dark-blue-color url("../../assets/images/cloud.png");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 85px;
+    width: 100%;
+  }
+
+  .wrapperLeft {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 20px 0 20px;
+    width: 100%;
+
+    .nameEnter {
+      opacity: 0;
+      transform:translateY(-100%);
+    }
+    .nameEnterActive {
+      opacity: 1;
+      transform:translateY(0);
+      transition: opacity 300ms, transform 300ms;
+    }
+    .nameExit {
+      opacity: 1;
+      transform:translateY(0);
+    }
+    .nameExitActive {
+      opacity: 0;
+      transform:translateY(-100%);
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+  }
+
+  .wrapperRight {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 0 20px 0 20px;
+    width: 80%;
+
+    .theme {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .select {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .language {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .language:hover {
+        border: 2px solid $blue-color;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: 701px) and (max-width: 880px) {
+    .wrapperLeft {
+      .title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 700px) {
+    flex-direction: column;
+    height: 120px;
+
+    &.dark {
+      flex-direction: column;
+      height: 120px;
+    }
+
+    .wrapperLeft {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px 0 20px;
+      width: 100%;
+
+      .logo {
+        margin: 0;
+        padding: 0;
+      }
+
+      .title {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .wrapperRight {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 20px 10px 20px;
+      width: 100%;
+
+      .theme {
+        margin: 0;
+        padding: 0;
+      }
+
+      .select {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        order: -1;
+        padding: 0;
+      }
+    }
+  }
+}

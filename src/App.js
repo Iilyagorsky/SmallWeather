@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {Route, Routes} from "react-router-dom";
+import Weather from "./pages/Weather/Weather";
+import Header from "./components/Header/Header";
+import { CityContext, LangContext } from "./Context";
 
-function App() {
+const App = () => {
+  const [context, setContext] = useState("London");
+  const [contextLang, setContextLang] = useState("en");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="innerWrapper">
+      <div className="container">
+        <CityContext.Provider value={[context, setContext]}>
+          <LangContext.Provider value={[contextLang, setContextLang]}>
+            <Header />
+            <Routes>
+              <Route path="/" exact element={<Weather />}/>
+            </Routes>
+          </LangContext.Provider>
+        </CityContext.Provider>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+

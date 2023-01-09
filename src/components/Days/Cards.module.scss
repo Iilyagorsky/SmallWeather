@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius-small;
+  padding: 10px;
+  width: 145px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .day {
+    margin-bottom: 7px;
+    font-size: 18px;
+    color: $white-color;
+  }
+
+  .dayInfo {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: $white-color;
+  }
+
+  .tempDay {
+    font-size: 18px;
+    color: $white-color;
+  }
+
+  .tempNight {
+    font-size: 13px;
+    color: $white-color;
+    margin-bottom: 6px;
+  }
+
+  .info {
+    font-size: 13px;
+    color: $white-color;
+  }
+
+  //&:hover {
+  //  box-shadow: var(#{--card-shadow-default});
+  //}
+}

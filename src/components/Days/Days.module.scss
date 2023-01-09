@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    background: $dark-transparent-color;
+    box-shadow: $box-shadow-dark;
+    padding-left: 30px;
+    position: relative;
+
+    @media only screen and (max-width: 800px) and (min-width: 431px) {
+        padding-left: 15px;
+    }
+
+    @media screen and (max-width: 430px) {
+        padding-left: 12px;
+    }
+}

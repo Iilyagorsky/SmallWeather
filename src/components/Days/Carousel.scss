@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.react-multiple-carousel__arrow {
+  background: $arrow-background-dark
+}
+
+.react-multiple-carousel__arrow:hover{
+  background: $arrow-background-light
+}
+
+.react-multiple-carousel__arrow::before{
+  color: $blue-color;
+  font-size:25px;
+  font-weight: bold;
+}
+
+.react-multiple-carousel__arrow--left{
+  left:calc(0% + 1px)
+}
+
+.react-multiple-carousel__arrow--right{
+  right:calc(3% + 1px)
+}
+
+.react-multi-carousel-list {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 431px) {
+  .react-multi-carousel-list {
+    justify-content: space-between;
+    padding: 0 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .react-multi-carousel-list {
+    padding: 0 0 0 20px;
+  }
+}

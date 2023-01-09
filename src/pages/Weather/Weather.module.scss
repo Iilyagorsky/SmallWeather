@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 1 auto;
+
+  .backImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .dayWrapper {
+    display: flex;
+    padding: 50px 20px 20px 20px;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .daysWrapper {
+    margin-top: auto;
+  }
+
+  @media screen and (max-width: 720px) {
+    .dayWrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}

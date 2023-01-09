@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+.wrapper {
+  background: $dark-transparent-color;
+  border-radius: $border-radius-small;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  position: relative;
+  width: 100%;
+
+  .top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+
+    svg {
+      height: 200px;
+      width: 300px;
+    }
+
+    .info {
+      padding: 20px 0 0 20px;
+
+      .temp{
+        color: $blue-color;
+        font-size: 70px;
+        font-weight: bold;
+      }
+
+      .description {
+        color: $white-color;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .bottom {
+    padding-left: 20px;
+
+    .time,
+    .city {
+      color: $white-color;
+      font-size: 30px;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) and (min-width: 861px) {
+    align-items: center;
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 860px) {
+    align-items: center;
+    max-width: 350px;
+
+    .top {
+      flex-direction: column;
+
+      .info {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
